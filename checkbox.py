@@ -16,8 +16,7 @@ root.columnconfigure(2, weight=2)
 var = StringVar()
 
 def show():
-    global bSelectBackdrop
-    myLabel = Label(root, text=var.get()).grid(row=1,column=1,columnspan=3)
+    #global bSelectBackdrop
     if var.get() == "on":
         bSelectBackdrop = Button(root, text="Select File",state=ACTIVE)
         myLabel = Text(root, height=1, state=NORMAL, relief=SUNKEN, bd=4)
