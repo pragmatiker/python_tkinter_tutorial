@@ -11,7 +11,7 @@ class Employee:
     def fullName(self):
         return '{} {}'.format(self.first, self.last)
     def fullRecord(self):
-        return '{}\n{}\n{}\n{}'.format(self.first, self.last, str(self.pay), self.email)
+        return '{}\n{}\n{}\n{}'.format(self.first, self.last, self.pay, self.email)
 
 # SubClass of Employee
 class Developer(Employee):
@@ -21,7 +21,7 @@ class Developer(Employee):
         self.prog_lang = prog_lang
         self.email = first + '.' + last + '@dev-company.com' 
     def fullRecord(self):
-        return '{}\n{}\n{}\n{}\n{}'.format(self.first, self.last, str(self.pay), self.email, self.prog_lang)
+        return '{}\n{}\n{}\n{}\n{}'.format(self.first, self.last, self.pay, self.email, self.prog_lang)
 
 class Manager(Employee):
 

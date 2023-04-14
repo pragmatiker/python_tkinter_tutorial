@@ -15,7 +15,7 @@ class Employee:
     def fullName(self): # instancemethod 
         return '{} {}'.format(self.first, self.last)
     def fullRecord(self):
-        return '{}\n{}\n{}\n{}'.format(self.first, self.last, str(self.pay), self.email)
+        return '{}\n{}\n{}\n{}'.format(self.first, self.last, self.pay, self.email)
     def payRaise(self):
         self.pay = int(self.pay * self.raise_amount)
     @classmethod

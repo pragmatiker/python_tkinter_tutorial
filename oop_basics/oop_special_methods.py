@@ -14,25 +14,20 @@ class Employee:
     
     def fullName(self):
         return '{} {}'.format(self.first, self.last)
-    def fullRecord(self):
-        return '{}\n{}\n{}\n{}'.format(self.first, self.last, str(self.pay), self.email)
     def payRaise(self):
         self.pay = int(self.pay * self.raise_amount)
+    def __repr__(self):
+        return "Employee('{}','{}',{})".format(self.first,self.last,self.pay)
+    def __str__(self):
+        return '{} - {}'.format(self.fullName(), self.email)
+
+# DUNDER method (double underscore methods) like __init__
         
 emp_1 = Employee('Tim','Herty',50000)
 emp_2 = Employee('Jürgen', 'Würgen', 60000)
+print(1 + 2)
+print('1')
 
-# print(emp_1.__dict__)
-
-
-Employee.raise_amount = 1.06 # Class variable
-print(Employee.__dict__)
-
-emp_1.payRaise()
-print(emp_1.fullRecord())
-
-print(emp_1.__dict__)
-
-#emp_1.raise_amount = 1.05 # instance variable
-print(emp_1.__dict__)
-print(emp_1.raise_amount)
+print(emp_1) # references __str__ so you can change how your object is presented
+print(repr(emp_1)) # show how to repruduce the instance
+print(emp_1.__str__())
