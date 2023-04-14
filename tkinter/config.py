@@ -7,21 +7,24 @@ id_x = 1
 def do_some():
     global id_x
     if id_x == 1:
-        myLabel.configure(background="orange")
+        myLabel.config(background="orange")
     if id_x == 2:
-        myLabel.configure(background="red")        
+        myLabel.config(background="red")        
     if id_x == 3:
-        myLabel.configure(background="lightblue")
+        myLabel.config(background="lightblue")
+        root.config(bg="green")
     if id_x == 4:
-        myLabel.configure(background="blue")
+        myLabel.config(background="blue")
     if id_x == 5:
-        myLabel.configure(background="lightgreen")                
+        myLabel.config(background="lightgreen")                
     if id_x == 6:
-        myLabel.configure(background="green")
-        id_x = 0
-    id_x += 1
+        myLabel.config(background="green")
+    if id_x == 6:
+        id_x = 1
+    else:
+        id_x += 1
 
-myLabel = Label(root, text="Hoden" , font=('Helveticy',18))
+myLabel = Label(root, text="Hoden" , font=('Helvetica',18))
 myLabel.pack(padx=5,pady=5)
 
 myButton = Button(root, text="clik",command=do_some)
